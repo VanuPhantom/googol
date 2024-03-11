@@ -1,0 +1,17 @@
+[package]
+name = "googol"
+version = "0.1.0"
+authors = ["Tess Ellenoir Duursma <tess@vanu.dev>"]
+edition = "2021"
+description = "A generic library to call Google APIs"
+homepage = "https://vanu.dev/projects/googol"
+repository = "https://github.com/VanuPhantom/googol"
+license = "MIT"
+keywords = ["gcp", "google", "cloud", "http", "auth"]
+categories = ["authentication", "web-programming::http-client", "asynchronous"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+gcp_auth = "0.10.0"
+tokio = { version = "1.36.0", features = ["full"] }
