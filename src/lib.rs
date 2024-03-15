@@ -26,7 +26,7 @@ pub struct Client<'a>
 
 impl<'a> Client<'a>
 {
-    pub const fn from_file<T>(path: &'a str, scopes: &'a [&'a str]) -> Client<'a>
+    pub const fn from_file(path: &'a str, scopes: &'a [&'a str]) -> Client<'a>
     {
         Client {
             initialization_method: InitializationMethod::File(path),
