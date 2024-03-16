@@ -1,6 +1,6 @@
 [package]
 name = "googol"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Tess Ellenoir Duursma <tess@vanu.dev>"]
 edition = "2021"
 description = "A generic library to call Google APIs"
