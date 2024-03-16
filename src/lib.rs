@@ -67,7 +67,7 @@ impl<'a> Client<'a>
         })
     }
 
-    pub async fn get_token(self) -> Result<Token> {
+    pub async fn get_token(&self) -> Result<Token> {
         self.get_authentication_manager()
             .await?
             .get_token(self.scopes)
