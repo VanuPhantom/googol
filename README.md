@@ -11,7 +11,7 @@ const SCOPES: &'static [&'static str] = &["https://www.googleapis.com/auth/fireb
 static GCP_AUTHENTICATION_CLIENT: googol::Client =
     googol::Client::from_file("credentials.json", SCOPES);
 #[cfg(not(debug_assertions))]
-static GCP_AUTHENTICATION_CLIENT: google::Client = googol::Client::from_environment(SCOPES);
+static GCP_AUTHENTICATION_CLIENT: googol::Client = googol::Client::from_environment(SCOPES);
 
 async fn get_auth_token() -> Result<Token, Error> {
     GCP_AUTHENTICATION_CLIENT
