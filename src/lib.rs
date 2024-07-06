@@ -50,7 +50,7 @@ impl<'a> Client<'a> {
     }
 
     async fn get_authentication_manager(&'a self) -> Result<&'a AuthenticationManager> {
-        Ok(match &self.initialization_method {
+        Ok(match self.initialization_method {
             InitializationMethod::File(path) => {
                 self.authentication_manager
                     .get_or_try_init(|| async {
