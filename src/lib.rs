@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use gcp_auth::{AuthenticationManager, CustomServiceAccount, Token};
+use gcp_auth::{AuthenticationManager, CustomServiceAccount};
 use tokio::sync::OnceCell;
 
 /// The errors which are returned by *googol*'s functions
@@ -17,9 +17,11 @@ enum InitializationMethod<'a> {
     File(&'a str),
     Environment,
 }
-
 /// A wrapper around [`std::result::Result`] which is returned by *googol*'s functions
 pub type Result<T> = std::result::Result<T, Error>;
+
+/// A GCP access token
+pub type Token = gcp_auth::Token;
 
 /// The client through which *googol* interacts with [GCP](https://cloud.google.com)
 pub struct Client<'a> {
